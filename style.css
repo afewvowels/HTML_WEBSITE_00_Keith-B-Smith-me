@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background:#C4C4C4;
+	margin:0;
+	padding:0;
+}
+
+#contact-info{
+	padding-top:-10px;
+	padding-bottom:10px;
+}
+
+#contact-info h3{
+	color:rgb(250, 250, 250);
+	text-align:center;
+	font-family:'Roboto Condensed',sans-serif;
+	text-transform:uppercase;
+	font-weight:300;
+	margin:10px 0 10px 0;
+}
+
+#contact-info a{
+	color:rgb(250, 250, 250);
+	text-decoration:none;
+}
+
+#content{
+	width:90%;
+	margin:auto;
+}
+
+#hidden2{
+	display:none;
+}
+
+#hidden3{
+	display:none;
+}
+
+#main-wrapper{
+	height:240px;
+	background:#939393;
+	width:100%;
+	margin:auto;
+}
+
+#name-box {
+	color:rgb(250, 250, 250);
+	text-align:center;
+	font-family:'Fjalla One', sans-serif;
+	text-transform:uppercase;
+}
+
+#name-box h1 {
+	font-size:66px;
+	margin-top:50px;
+	margin-bottom:5px;
+	padding-top:20px;
+}
+
+#name-box h2 {
+	font-size: 42px;
+	margin: 5px 0px;
+}
+
+#name-box h2 a {
+	color:rgb(250, 250, 250);
+	text-decoration: none;
+}
+
+@media screen and (max-width:338px) {
+	#content{
+		width:100%;
+	}
+	#hidden{
+		display:none;
+	}
+	#hidden2{
+		display:inline;
+	}
+	#main-wrapper{
+		height:315px;
+	}
+}
+
+@media screen and (max-width:376px) {
+	#content{
+		width:100%;
+	}
+	#main-wrapper{
+		height:340px;
+	}
+}
+
+@media screen and (max-width:450px) {
+	#content{
+		width:100%;
+	}
+	#hidden3{
+		display:inline;
+	}
+	#main-wrapper{
+		height:340px;
+	}
+}

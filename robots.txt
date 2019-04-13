@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /public_html/
+Disallow: /App_Code/
+Disallow: /stats/
+Disallow: /.well-known/
+Disallow: /errors/
+
+Sitemap: http://keithbsmith.me/sitemap.xml
