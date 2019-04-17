@@ -4,5 +4,6 @@ Disallow: /App_Code/
 Disallow: /stats/
 Disallow: /.well-known/
 Disallow: /errors/
+Disallow: /img/
 
 Sitemap: http://keithbsmith.me/sitemap.xml
