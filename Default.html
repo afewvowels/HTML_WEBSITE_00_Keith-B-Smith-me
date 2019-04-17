@@ -1,18 +1,38 @@
 <!doctype html>
 <html>
 <head>
+	<!-- Google Analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-138257212-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
 	<meta charset="utf-8">
 	<!-- Mobile responsive -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Web Designer & Developer | Home | Keith Smith</title>
 
-	<!-- Stylesheet -->
-	<link rel="stylesheet" href="style.css">
-	<!-- Google web fonts link -->
-	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto+Condensed:300" rel="stylesheet">
+	<noscript>
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<!-- Google web fonts link -->
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto+Condensed:300" rel="stylesheet">
+	</noscript>
 
 	<link rel='canonical' href='http://keithbsmith.me' />
+
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/site.webmanifest">
 
 	<meta name='description' content='Keith Smith is creating web pages as a web designer and developer in Mercer County. He also codes and writes programs and does video work as well.'>
 	<meta name='keywords' content='Keith,Keith Smith,Keith B Smith,Keith B. Smith,web designer,web developer,developer,programmer,mercer,hermitage,pennsylvania,pa,youngstown,oh,ohio,boardman,poland,websites'>
@@ -23,29 +43,14 @@
 	<meta property="og:url" content="http://keithbsmith.me">
 	<meta property="og:description" content="Learn more about me-Keith Smith-and my past work history and my current skill set by downloading my resume today.">
 	<meta property="og:type" content="profile">
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138257212-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-138257212-1');
-	</script>
-
 </head>
 
 <body>
-	<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXPNVJ9"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
 	<div id="main-wrapper">
 		<div id="content" itemscope itemtype='http://keithbsmith.me'>
 			<div id="name-box">
 				<h1 itemprop='name'>Keith B.<br id="hidden3"> Smith</h1>
-				<h2><a href='Resume_Keith_Smith_2018.pdf' download id='resume_link' title='Download my resume'>Resume</a></h2>
+				<h2><a href='Resume_Keith_Smith_2018.pdf' download id='resume_link' title='Download my resume' onclick="ga('send', 'event', 'resume', 'download', 'resume-download', '1');">Resume</a></h2>
 			</div>
 			<div id="contact-info">
 				<h3 itemprop='telephone'><a href="tel:724-456-7677" title="Call me directly">724.456.7677</a><span id="hidden"> | </span><br id="hidden2"><a href="mailto:keithbsmith87@gmail.com" title='Send me an email'>keithbsmith87@gmail.com</a></h3>
@@ -53,5 +58,23 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- style links -->
+	<script type="text/javascript" async>
+		/* Style CSS */
+		var style = document.createElement('link');
+		style.rel = 'stylesheet';
+		style.href = 'style.css';
+		style.type = 'text/css';
+		var styleLink = document.getElementsByTagName('link')[0];
+		styleLink.parentNode.insertBefore(style, styleLink);
+
+		/* Google Fonts */
+		var fonts = document.createElement('link');
+		fonts.rel = 'stylesheet';
+		fonts.href = 'https://fonts.googleapis.com/css?family=Fjalla+One|Roboto+Condensed:300';
+		var fontsLink = document.getElementsByTagName('link')[0];
+		fontsLink.parentNode.insertBefore(fonts, fontsLink);
+	</script>
 </body>
 </html>
