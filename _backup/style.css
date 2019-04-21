@@ -1,18 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 
-body{
+body {
 	background:#C4C4C4;
 	margin:0;
 	padding:0;
 }
 
-#contact-info{
-	padding-top:-10px;
-	padding-bottom:10px;
-}
-
-#contact-info h3{
+#contact-info h3 {
 	color:rgb(250, 250, 250);
 	text-align:center;
 	font-family:'Roboto Condensed',sans-serif;
@@ -21,14 +16,47 @@ body{
 	margin:10px 0 10px 0;
 }
 
-#contact-info a{
+#contact-info a {
 	color:rgb(250, 250, 250);
 	text-decoration:none;
 }
 
-#content{
-	width:90%;
-	margin:auto;
+#content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+#error-content h1, #error-content p {
+	color:rgb(250, 250, 250);
+	font-family:'Fjalla One', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#error-content h1 {
+	font-size: 4.2em;
+	text-transform: uppercase;
+	margin-top: 5px;
+}
+
+#error-content p {
+	margin: 5px 0px;
+	font-size: 1.5em;
+}
+
+#error-wrapper {
+	height:240px;
+	background:#939393;
+	width:100%;
+	margin-top: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 #hidden2{
@@ -40,10 +68,10 @@ body{
 }
 
 #main-wrapper{
-	height:240px;
+	height:280px;
 	background:#939393;
 	width:100%;
-	margin:auto;
+	margin-top: 25px;
 }
 
 #name-box {
@@ -55,9 +83,8 @@ body{
 
 #name-box h1 {
 	font-size:66px;
-	margin-top:50px;
 	margin-bottom:5px;
-	padding-top:20px;
+	margin-top: 0;
 }
 
 #name-box h2 {
@@ -68,6 +95,13 @@ body{
 #name-box h2 a {
 	color:rgb(250, 250, 250);
 	text-decoration: none;
+}
+
+#social {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 128px;
 }
 
 @media screen and (max-width:338px) {
@@ -81,7 +115,7 @@ body{
 		display:inline;
 	}
 	#main-wrapper{
-		height:315px;
+		height:380px;
 	}
 }
 
@@ -90,7 +124,7 @@ body{
 		width:100%;
 	}
 	#main-wrapper{
-		height:340px;
+		height:380px;
 	}
 }
 
@@ -102,6 +136,6 @@ body{
 		display:inline;
 	}
 	#main-wrapper{
-		height:340px;
+		height:380px;
 	}
 }
