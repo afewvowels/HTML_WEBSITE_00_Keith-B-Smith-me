@@ -19,22 +19,7 @@ body {
             / 1fr;
 }
 
-footer {
-  grid-area: footer;
-  border-top: 2px solid black;
-  font-family: $font-body;
-  font-size: 1.15em;
-  div {
-    height: 100% !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p {
-      margin-bottom: 0;
-    }
-  }
-}
-
+/* Header content ------------ */
 header {
   grid-area: header;
   display: flex !important;
@@ -51,7 +36,6 @@ header {
     cursor: default;
     #logo {
       display: flex;
-      // padding-top: 5px;
       align-items: center;
       justify-content: center;
       height: 50px;
@@ -75,7 +59,6 @@ header {
       }
     }
   }
-
 }
 
 #menu-nav {
@@ -101,6 +84,9 @@ header {
       .menu-url {
         cursor: pointer;
       }
+      a:hover {
+        text-decoration: none;
+      }
       a::before {
         content: attr(data-hover);
         border-bottom: 3px solid #000;
@@ -123,6 +109,7 @@ header {
   }
 }
 
+/* Carousel content ------------ */
 #hero-carousel-container {
   grid-area: carousel;
   height: 400px;
@@ -140,27 +127,27 @@ header {
       transition: transform 0.8s ease-in-out;
       text-align: center;
       img {
-        grid-template-columns: 1 / 4;
-        grid-template-rows: 1 / 4;
+        grid-column: 1 / 4;
+        grid-row: 1 / 5;
         position: absolute;
         height: 100%;
         width: auto;
         justify-self: center;
       }
-      h2, p {
+      p {
         z-index: 10;
         color: white;
         text-shadow: 0 0 25px rgb(80,80,80);
         margin-bottom: 0;
       }
-      h2 {
-        grid-area: h2;
+      p:nth-child(1) {
+        grid-area: p1;
         align-self: end;
         font-family: $font-display;
         font-size: 3.8em;
       }
-      p {
-        grid-area: p;
+      p:nth-child(2) {
+        grid-area: p2;
         font-size: 1.8em;
         align-self: start;
         font-family: $font-body;
@@ -169,28 +156,25 @@ header {
     .selected {
       display: grid;
       grid-template:
-        '. . .' auto
-        '. h2 .' 100px
-        '. p .' 100px
-        '. . .' auto
-        / auto 500px auto;
+        'p1' 1fr
+        'p2' 1fr
+        / 1fr;
       transform: translateX(0%);
       transition: transform 0.8s ease-in-out;
     }
     .move-off-screen {
       display: grid;
       grid-template:
-        '. . .' auto
-        '. h2 .' 100px
-        '. p .' 100px
-        '. . .' auto
-        / auto 500px auto;
+        'p1' 1fr
+        'p2' 1fr
+        / 1fr;
       transform: translateX(-100%);
       z-index: 30;
     }
   }
 }
 
+/* Main content ------------ */
 #main-content {
   grid-area: content;
   display: grid;
@@ -364,6 +348,7 @@ header {
 
   }
 
+  /* Banner content ------------ */
   #banner-wrapper {
     grid-area: banner;
     width: 100%;
@@ -434,6 +419,147 @@ header {
   }
 }
 
+/* Footer content ------------ */
+footer {
+  grid-area: footer;
+  border-top: 2px solid black;
+  font-family: $font-body;
+  font-size: 1.15em;
+  div {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* 404 page content ------------ */
+.error-message {
+  grid-area: carousel;
+  padding-top: 45px;
+  padding-left: 65px;
+  section {
+    width: 100%;
+    height: 100%;
+    grid-area: content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    h2, h3, p {
+      padding: 0;
+      margin: 0;
+    }
+    h2 {
+      font-size: 3.0em;
+    }
+    h3 {
+      font-size: 2.5em;
+    }
+    p {
+      font-size: 1.0em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  header {
+    #title {
+      h1 {
+        font-size: 0.8em !important;
+      }
+    }
+  }
+  .error-message {
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  header {
+    #title {
+      h1 {
+        font-size: 1.0em;
+      }
+    }
+  }
+
+  #hero-carousel-container {
+    #hero-carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .img-container {
+        width: 100vw;
+        img {
+          grid-column: 1 / 2;
+          grid-row: 1 / 3;
+          min-width: 100%;
+        }
+      }
+      .selected {
+        grid-template:
+          'p1' 1fr
+          'p2' 1fr
+          / 1fr;
+      }
+      .move-off-screen {
+        grid-template:
+          'p1' 1fr
+          'p2' 1fr
+          / 1fr;
+      }
+    }
+  }
+
+  #main-content {
+    padding: 0px 15px;
+    grid-template:
+      "contact" 90px
+      "c1" auto
+      "c3" auto
+      "c4" auto
+      "c5" auto
+      "banner" 125px
+      "resume" auto
+      / 1fr !important;
+    #c2 {
+      display: flex !important;
+      flex-direction: column;
+      align-items: space-between;
+      justify-content: space-between;
+      padding: 20px;
+      img {
+        margin-top: 15px;
+      }
+    }
+    #c3 {
+      .c3-item {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        .icon-wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+  footer {
+    div {
+      padding: 0px 5px;
+      p {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 750px) {
   #menu-nav {
     display: none;
@@ -445,7 +571,7 @@ header {
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     padding-left: 25px;
-    z-index: 20;
+    z-index: 100;
   }
 
   header {
@@ -486,6 +612,13 @@ header {
 }
 
 @media screen and (max-width: 960px) {
+  header {
+    #title {
+      h1 {
+        font-size: 1.25em;
+      }
+    }
+  }
   #main-content {
     grid-template:
               "top-l contact top-r" 90px

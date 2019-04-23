@@ -7,6 +7,9 @@
 
 	<title>Web Designer & Developer | Home | Keith Smith</title>
 
+	<!-- For robots -->
+	<meta name='robots' content='index' />
+
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Google web fonts link -->
@@ -22,6 +25,24 @@
 
 	<!-- Scripts -->
 	<script src='js/js.js' async></script>
+
+	<!-- Twitter -->
+	<script>window.twttr = (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	  if (d.getElementById(id)) return t;
+	  js = d.createElement(s);
+	  js.id = id;
+	  js.src = "https://platform.twitter.com/widgets.js";
+	  fjs.parentNode.insertBefore(js, fjs);
+
+	  t._e = [];
+	  t.ready = function(f) {
+	    t._e.push(f);
+	  };
+
+	  return t;
+	}(document, "script", "twitter-wjs"));</script>
 
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -56,13 +77,16 @@
 </head>
 
 <body>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
 	<header>
 		<div id='branding'>
 			<div id='logo'>
 				<p>K</p>
 			</div>
 			<div id='title'>
-				<h1>Keith B Smith</h1>
+				<h1>Keith B Smith | Web</h1>
 			</div>
 		</div>
 		<div id='menu-display-icon'>
@@ -80,29 +104,29 @@
 	<section id='hero-carousel-container'>
 		<div id='hero-carousel'>
 			<div class='img-container selected' id='carousel-design'>
-				<h2>Design</h2>
+				<p>Design</p>
 				<p>Effortless design. Great.</p>
-				<img src='img/carousel/design.jpg'>
+				<img src='img/carousel/design.jpg' alt='great design'>
 			</div>
 			<div class='img-container' id='carousel-develop'>
-				<h2>Develop</h2>
+				<p>Develop</p>
 				<p>Pick three: good, fast, affordable.</p>
-				<img src='img/carousel/develop.jpg'>
+				<img src='img/carousel/develop.jpg' alt='innovative development'>
 			</div>
 			<div class='img-container' id='carousel-work'>
-				<h2>Work</h2>
+				<p>Work</p>
 				<p>Around here, it's TGIM.</p>
-				<img src='img/carousel/work.jpg'>
+				<img src='img/carousel/work.jpg' alt='work hard'>
 			</div>
 		</div>
 	</section>
 	<section id='main-content'>
 		<h3 class='cta-contact'>Contact me:</h3>
-		<div id='contact-info'>
-			<h3>Keith B. Smith</h3>
-			<h3>p: <a href='tel:724-456-7677'>724-456-7677</a></h3>
-			<h3>e: <a href='mailto:keithbsmith87@gmail.com'>keithbsmith87@gmail.com</a></h3>
-			<h3>a: <a href='https://goo.gl/maps/3fDjMqU7z5RVqAMY9' target='_blank'>Hermitage, PA</a></h3>
+		<div id='contact-info' itemscope='' itemtype='http://schema.org/person'>
+			<h3 itemprop='name'>Keith B. Smith</h3>
+			<h3>p: <a href='tel:724-456-7677' itemprop='telephone'>724-456-7677</a></h3>
+			<h3>e: <a href='mailto:keithbsmith87@gmail.com' itemprop='email'>keithbsmith87@gmail.com</a></h3>
+			<h3>a: <a href='https://goo.gl/maps/3fDjMqU7z5RVqAMY9' target='_blank' itemprop='homeLocation'>Hermitage, PA</a></h3>
 		</div>
 		<div id='c1'>
 			<div>
@@ -161,12 +185,14 @@
 			</div>
 		</aside>
 		<div id='resume-wrapper'>
-			<h5>Download my <a href='Resume-Keith-Smith-2018.pdf'>resume</a>.</h5>
+			<h5>Download my <a href='Resume-Keith-Smith-2018.pdf' onClick="ga('send','event','resume','download','Resume-Keith-Smith-2018.pdf',1);" nofollow>resume</a>.</h5>
 		</div>
 	</section>
 	<footer>
 		<div>
 			<p>&copy;2019 Keith B. Smith</p>
+			<div class="fb-share-button" data-href="https://keithbsmith.me/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkeithbsmith.me%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+			<a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
 		</div>
 	</footer>
 </body>

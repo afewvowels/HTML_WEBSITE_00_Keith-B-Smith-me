@@ -7,13 +7,53 @@
 
 	<title>Web Designer & Developer | Home | Keith Smith</title>
 
+	<!-- For robots -->
+	<meta name='robots' content='index' />
+
 	<!-- Stylesheet -->
-	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="../css/style.css">
 	<!-- Google web fonts link -->
-	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300|Source+Sans+Pro" rel="stylesheet">
 
-	<link rel='canonical' href='http://keithbsmith.me' />
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+	<!-- Bootstrap -->
+	<link href='../css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+	<script src='../js/jquery.3.4.0.min.js'></script>
+	<script src='../js/bootstrap.min.js'></script>
+
+	<!-- Scripts -->
+	<script src='../js/js.js' async></script>
+
+	<!-- Twitter -->
+	<script>window.twttr = (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	  if (d.getElementById(id)) return t;
+	  js = d.createElement(s);
+	  js.id = id;
+	  js.src = "https://platform.twitter.com/widgets.js";
+	  fjs.parentNode.insertBefore(js, fjs);
+
+	  t._e = [];
+	  t.ready = function(f) {
+	    t._e.push(f);
+	  };
+
+	  return t;
+	}(document, "script", "twitter-wjs"));</script>
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+
+	<!-- Canonical -->
+	<link rel='canonical' href='https://keithbsmith.me' />
+
+	<!-- Meta description and keywords -->
 	<meta name='description' content='Keith Smith is creating web pages as a web designer and developer in Mercer County. He also codes and writes programs and does video work as well.'>
 	<meta name='keywords' content='Keith,Keith Smith,Keith B Smith,Keith B. Smith,web designer,web developer,developer,programmer,mercer,hermitage,pennsylvania,pa,youngstown,oh,ohio,boardman,poland,websites'>
 
@@ -37,20 +77,33 @@
 </head>
 
 <body>
-	<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXPNVJ9"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-	<div id='error-wrapper'>
-		<div id='error-content'>
-			<div>
-				<h1>404 Error</h1>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+	<header>
+		<div id='branding'>
+			<div id='logo'>
+				<p>K</p>
 			</div>
-			<div>
-                <p>The page you are looking for</p>
-                <p>is not here or does not exist.</p>
+			<div id='title'>
+				<h1>Keith B Smith | Web</h1>
 			</div>
 		</div>
-	</div>
+		<div id='menu-display-icon'>
+			<i class="fas fa-angle-double-down"></i>
+		</div>
+		<nav id='menu-nav'>
+			<ul>
+				<li><a class='menu-url selected-li' data-hover='Home' href='../Default.html'>Home</a></li>
+				<li><a class='menu-url' data-hover='Design'>Design</a></li>
+				<li><a class='menu-url' data-hover='Develop'>Develop</a></li>
+				<li><a class='menu-url' data-hover='Work'>Work</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class='error-message'>
+		<section>
+			<h2>404 error</h2>
+			<p>The page you are looking for<br />could not be found or does not exist</p>
+		</section>
+	</main>
 </body>
-</html>
