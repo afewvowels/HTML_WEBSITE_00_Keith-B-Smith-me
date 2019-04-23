@@ -408,9 +408,13 @@ header {
     align-self: center;
     justify-self: center;
     height: 80px;
+    text-align: center;
+    height: 100%;
+    padding-bottom: 20px;
     h5 {
       font-family: $font-display;
       font-size: 2.0em !important;
+      margin-bottom: 10px;
       a {
         color: black;
         text-decoration: underline;

@@ -320,10 +320,14 @@ header {
     grid-area: resume;
     align-self: center;
     justify-self: center;
-    height: 80px; }
+    height: 80px;
+    text-align: center;
+    height: 100%;
+    padding-bottom: 20px; }
     #main-content #resume-wrapper h5 {
       font-family: "Roboto Slab", serif;
-      font-size: 2.0em !important; }
+      font-size: 2.0em !important;
+      margin-bottom: 10px; }
       #main-content #resume-wrapper h5 a {
         color: black;
         text-decoration: underline; }
