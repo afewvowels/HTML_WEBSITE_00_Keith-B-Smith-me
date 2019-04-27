@@ -84,6 +84,9 @@ header {
       .menu-url {
         cursor: pointer;
       }
+      a {
+        color: rgb(144,144,144);
+      }
       a:hover {
         text-decoration: none;
       }
@@ -180,9 +183,9 @@ header {
   display: grid;
   grid-template:
     [row-1-start] "top-l contact contact top-r" 90px [row-1-end]
-    [row-2-start] "gutter-start c1 c1 gutter-end"  auto [row-2-end]
-    [row-3-start] "gutter-start c3 c4 gutter-end"  auto [row-3-end]
-    [row-4-start] "gutter-start c5 c5 gutter-end"  auto [row-4-end]
+    [row-2-start] "gutter-start contact-info contact-info gutter-end"  auto [row-2-end]
+    [row-3-start] "gutter-start about-me mercer gutter-end"  auto [row-3-end]
+    [row-4-start] "gutter-start quotes quotes gutter-end"  auto [row-4-end]
     [row-5-start] "gutter-start banner banner gutter-end"  125px [row-5-end]
     [row-6-start] "gutter-start resume resume gutter-end" auto [row-6-end]
     / 1fr 3fr 3fr 1fr;
@@ -195,7 +198,7 @@ header {
     font-family: $font-display;
   }
   #contact-info {
-    grid-area: c1;
+    grid-area: contact-info;
     font-family: $font-body;
     width: 350px;
     height: 210px;
@@ -224,8 +227,8 @@ header {
     margin-bottom: 0;
     font-family: $font-body;
   }
-  #c1 {
-    grid-area: c3;
+  #about-me {
+    grid-area: about-me;
     padding: 25px;
     display: flex;
     justify-content: flex-start;
@@ -250,15 +253,15 @@ header {
       line-height: 1.0em;
     }
   }
-  #c1:first-letter {
+  #about-me:first-letter {
     font-size: 2.0em;
     line-height: 1.0em;
     font-family: $font-display;
   }
-  #c2 {
+  #mercer {
     width: 80%;
     padding: 35px;
-    grid-area: c4;
+    grid-area: mercer;
     align-self: center;
     justify-self: center;
     margin: 25px;
@@ -268,7 +271,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    #c2-text-wrapper {
+    #mercer-text-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -292,14 +295,14 @@ header {
       height: auto;
     }
   }
-  #c3 {
-    grid-area: c5;
+  #quote-block {
+    grid-area: quotes;
     padding: 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    .c3-item {
+    .quote-block-item {
       border: 1px solid black;
       display: flex;
       align-items: center;
@@ -470,6 +473,71 @@ footer {
   }
 }
 
+/* Code pages styling -------------*/
+#body-code {
+  display: grid;
+  grid-template:
+    'header' 80px
+    'code' auto
+    'footer' 65px
+    / auto;
+  #code-main-wrapper {
+    grid-area: code;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px;
+    #code-nav {
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+          a {
+            span {
+              padding: 10px 20px;
+            }
+            span:hover {
+              background-color: black;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    #code-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      .code-item {
+        overflow: hidden;
+        width: 500px;
+        height: 500px;
+        margin: 20px;
+        padding: 25px;
+        border: 2px solid black;
+        pre {
+          height: 340px;
+          .language-cpp {
+          }
+        }
+        .code-title {
+          font-family: $font-display;
+          font-size: 1.85em;
+          margin-bottom: 5px;
+        }
+        .code-description {
+          font-family: $font-body;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 450px) {
   header {
@@ -526,14 +594,14 @@ footer {
     padding: 0px 15px;
     grid-template:
       "contact" 90px
-      "c1" auto
-      "c3" auto
-      "c4" auto
-      "c5" auto
+      "contact-info" auto
+      "about-me" auto
+      "mercer" auto
+      "quotes" auto
       "banner" 125px
       "resume" auto
       / 1fr !important;
-    #c2 {
+    #mercer {
       display: flex !important;
       flex-direction: column;
       align-items: space-between;
@@ -543,8 +611,8 @@ footer {
         margin-top: 15px;
       }
     }
-    #c3 {
-      .c3-item {
+    #quote-block {
+      .quote-block-item {
         display: flex !important;
         align-items: center;
         justify-content: center;
@@ -589,8 +657,8 @@ footer {
     }
   }
   #main-content {
-    #c3 {
-      .c3-item {
+    #quote-block {
+      .quote-block-item {
         .item-text-wrapper {
           p:nth-child(3) {
             padding-right: 0px !important;
@@ -626,10 +694,10 @@ footer {
   #main-content {
     grid-template:
               "top-l contact top-r" 90px
-              "gutter-start c1 gutter-end" auto
-              "gutter-start c3 gutter-end" auto
-              "gutter-start c4 gutter-end" auto
-              "gutter-start c5 gutter-end" auto
+              "gutter-start contact-info gutter-end" auto
+              "gutter-start about-me gutter-end" auto
+              "gutter-start mercer gutter-end" auto
+              "gutter-start quotes gutter-end" auto
               "gutter-start banner gutter-end" 125px
               "gutter-start resume gutter-end" auto
               / 80px 1fr 80px;
@@ -640,14 +708,14 @@ footer {
     #contact-info {
       margin: 25px 0px;
     }
-    #c2 {
+    #mercer {
       display: grid;
       grid-template:
         'text gap image' 1fr
         / 1fr 10px 1fr;
       justify-self: center;
       align-self: center;
-      #c2-text-wrapper {
+      #mercer-text-wrapper {
         grid-area: text;
         p {
           padding-bottom: 0;
@@ -660,9 +728,9 @@ footer {
         height: auto;
       }
     }
-    #c3 {
+    #quote-block {
       flex-direction: column;
-      .c3-item {
+      .quote-block-item {
         width: 100%;
         display: grid;
         grid-template:

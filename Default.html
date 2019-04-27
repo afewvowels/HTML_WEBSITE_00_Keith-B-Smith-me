@@ -48,7 +48,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="manifest" href="manifest.json">
 
 	<!-- Canonical -->
 	<link rel='canonical' href='https://keithbsmith.me' />
@@ -73,14 +73,11 @@
 
 	  gtag('config', 'UA-138330425-1');
 	</script>
-
-
 </head>
 
 <body>
 	<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
-
 	<header>
 		<div id='branding'>
 			<div id='logo'>
@@ -95,10 +92,10 @@
 		</div>
 		<nav id='menu-nav'>
 			<ul>
-				<li><a class='menu-url selected-li' data-hover='Home'>Home</a></li>
+				<li><a href='#' class='menu-url selected-li' data-hover='Home'>Home</a></li>
+				<li><a href='code/Default.html' class='menu-url' data-hover='Code'>Code</a></li>
 				<li><a class='menu-url' data-hover='Design'>Design</a></li>
 				<li><a class='menu-url' data-hover='Develop'>Develop</a></li>
-				<li><a class='menu-url' data-hover='Work'>Work</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -129,21 +126,21 @@
 			<h3>e: <a href='mailto:keithbsmith87@gmail.com' itemprop='email'>keithbsmith87@gmail.com</a></h3>
 			<h3>a: <a href='https://goo.gl/maps/3fDjMqU7z5RVqAMY9' target='_blank' itemprop='homeLocation'>Hermitage, PA</a></h3>
 		</div>
-		<div id='c1'>
+		<div id='about-me'>
 			<div>
 				<p>K</p>
 			</div>
 			<p>My name is Keith B. Smith. I am a website designer and developer, and I spend my time working on and building websites. I currently reside in Hermitage, PA but I have had the opportunity to live in a diverse range of urban and rural environments. I have spent time working and studying in New York City, Houston, Boston, San Francisco and beyond.</p>
 		</div>
-		<div id='c2'>
-			<div id='c2-text-wrapper'>
+		<div id='mercer'>
+			<div id='mercer-text-wrapper'>
 				<h4>Mercer County</h4>
 				<p>Mercer county is a rural county located in western Pennsylvania. It has a slow, laid-back pace that is ideal for contemplation and rumination.</p>
 			</div>
 			<img src='img/barn.jpg' alt='red barn in rural setting'>
 		</div>
-		<div id='c3'>
-			<div id='c3-item-a' class='c3-item'>
+		<div id='quote-block'>
+			<div id='quote-block-item-a' class='quote-block-item'>
 				<div class='icon-wrapper'>
 					<i class="fas fa-pencil-ruler"></i>
 				</div>
@@ -153,7 +150,7 @@
 					<p>-Christopher Anton</p>
 				</div>
 			</div>
-			<div id='c3-item-b' class='c3-item'>
+			<div id='quote-block-item-b' class='quote-block-item'>
 				<div class='icon-wrapper'>
 					<i class="fas fa-laptop-code"></i>
 				</div>
@@ -163,7 +160,7 @@
 					<p>-Doug Linder</p>
 				</div>
 			</div>
-			<div id='c3-item-c' class='c3-item'>
+			<div id='quote-block-item-c' class='quote-block-item'>
 				<div class='icon-wrapper'>
 					<i class="fas fa-mug-hot"></i>
 				</div>
@@ -186,7 +183,7 @@
 			</div>
 		</aside>
 		<div id='resume-wrapper'>
-			<h5>Download my <a href='Resume-Keith-Smith-2019.pdf' onClick="ga('send','event','resume','download','Resume-Keith-Smith-2018.pdf',1);" nofollow>resume</a>.</h5>
+			<h5>Download my <a href='Resume-Keith-Smith-2019.pdf' nofollow>resume</a>.</h5>
 			<h5>Check out my <a href='https://github.com/afewvowels/'>code</a>.</h5>
 		</div>
 	</section>

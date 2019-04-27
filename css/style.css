@@ -64,6 +64,8 @@ header {
       color: #909090; }
       #menu-nav ul li .menu-url {
         cursor: pointer; }
+      #menu-nav ul li a {
+        color: #909090; }
       #menu-nav ul li a:hover {
         text-decoration: none; }
       #menu-nav ul li a::before {
@@ -136,7 +138,7 @@ header {
 #main-content {
   grid-area: content;
   display: grid;
-  grid-template: [row-1-start] "top-l contact contact top-r" 90px [row-1-end] [row-2-start] "gutter-start c1 c1 gutter-end" auto [row-2-end] [row-3-start] "gutter-start c3 c4 gutter-end" auto [row-3-end] [row-4-start] "gutter-start c5 c5 gutter-end" auto [row-4-end] [row-5-start] "gutter-start banner banner gutter-end" 125px [row-5-end] [row-6-start] "gutter-start resume resume gutter-end" auto [row-6-end]/1fr 3fr 3fr 1fr;
+  grid-template: [row-1-start] "top-l contact contact top-r" 90px [row-1-end] [row-2-start] "gutter-start contact-info contact-info gutter-end" auto [row-2-end] [row-3-start] "gutter-start about-me mercer gutter-end" auto [row-3-end] [row-4-start] "gutter-start quotes quotes gutter-end" auto [row-4-end] [row-5-start] "gutter-start banner banner gutter-end" 125px [row-5-end] [row-6-start] "gutter-start resume resume gutter-end" auto [row-6-end]/1fr 3fr 3fr 1fr;
   /* Banner content ------------ */ }
   #main-content .cta-contact {
     grid-area: contact;
@@ -146,7 +148,7 @@ header {
     margin-top: 15px;
     font-family: "Roboto Slab", serif; }
   #main-content #contact-info {
-    grid-area: c1;
+    grid-area: contact-info;
     font-family: "Source Sans Pro", sans-serif;
     width: 350px;
     height: 210px;
@@ -170,14 +172,14 @@ header {
   #main-content p {
     margin-bottom: 0;
     font-family: "Source Sans Pro", sans-serif; }
-  #main-content #c1 {
-    grid-area: c3;
+  #main-content #about-me {
+    grid-area: about-me;
     padding: 25px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center; }
-    #main-content #c1 div {
+    #main-content #about-me div {
       width: 100px;
       height: 100px;
       border-radius: 50%;
@@ -189,18 +191,18 @@ header {
       font-size: 4.0em;
       margin-bottom: 20px;
       margin-top: 10px; }
-    #main-content #c1 p:nth-child(2):first-letter {
+    #main-content #about-me p:nth-child(2):first-letter {
       font-size: 2.0em;
       font-family: "Roboto Slab", serif;
       line-height: 1.0em; }
-  #main-content #c1:first-letter {
+  #main-content #about-me:first-letter {
     font-size: 2.0em;
     line-height: 1.0em;
     font-family: "Roboto Slab", serif; }
-  #main-content #c2 {
+  #main-content #mercer {
     width: 80%;
     padding: 35px;
-    grid-area: c4;
+    grid-area: mercer;
     align-self: center;
     justify-self: center;
     margin: 25px;
@@ -210,32 +212,32 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column; }
-    #main-content #c2 #c2-text-wrapper {
+    #main-content #mercer #mercer-text-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center; }
-      #main-content #c2 #c2-text-wrapper h4 {
+      #main-content #mercer #mercer-text-wrapper h4 {
         font-family: "Roboto Slab", serif;
         text-decoration: underline; }
-      #main-content #c2 #c2-text-wrapper p {
+      #main-content #mercer #mercer-text-wrapper p {
         padding-top: 5px;
         padding-bottom: 15px; }
-      #main-content #c2 #c2-text-wrapper p:first-letter {
+      #main-content #mercer #mercer-text-wrapper p:first-letter {
         font-size: 1.45em;
         font-family: "Roboto Slab", serif;
         line-height: .5em; }
-    #main-content #c2 img {
+    #main-content #mercer img {
       width: 100%;
       height: auto; }
-  #main-content #c3 {
-    grid-area: c5;
+  #main-content #quote-block {
+    grid-area: quotes;
     padding: 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%; }
-    #main-content #c3 .c3-item {
+    #main-content #quote-block .quote-block-item {
       border: 1px solid black;
       display: flex;
       align-items: center;
@@ -244,7 +246,7 @@ header {
       height: 100%;
       width: 31%;
       padding: 25px; }
-      #main-content #c3 .c3-item .icon-wrapper {
+      #main-content #quote-block .quote-block-item .icon-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -253,24 +255,24 @@ header {
         border-radius: 50%;
         background-color: black;
         color: white; }
-        #main-content #c3 .c3-item .icon-wrapper i {
+        #main-content #quote-block .quote-block-item .icon-wrapper i {
           font-size: 2.8em; }
-      #main-content #c3 .c3-item .item-text-wrapper {
+      #main-content #quote-block .quote-block-item .item-text-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center; }
-        #main-content #c3 .c3-item .item-text-wrapper h2 {
+        #main-content #quote-block .quote-block-item .item-text-wrapper h2 {
           font-family: "Roboto Slab", serif;
           padding: 10px 0;
           margin-bottom: 0; }
-        #main-content #c3 .c3-item .item-text-wrapper P {
+        #main-content #quote-block .quote-block-item .item-text-wrapper P {
           font-size: 0.9em;
           font-family: "Source Sans Pro", sans-serif; }
-        #main-content #c3 .c3-item .item-text-wrapper p:nth-child(2):first-letter {
+        #main-content #quote-block .quote-block-item .item-text-wrapper p:nth-child(2):first-letter {
           font-size: 1.4em;
           font-family: "Roboto Slab", serif; }
-        #main-content #c3 .c3-item .item-text-wrapper p:nth-child(3) {
+        #main-content #quote-block .quote-block-item .item-text-wrapper p:nth-child(3) {
           padding: 10px 0px;
           align-self: flex-end; }
   #main-content #banner-wrapper {
@@ -370,6 +372,49 @@ footer {
     .error-message section p {
       font-size: 1.0em; }
 
+/* Code pages styling -------------*/
+#body-code {
+  display: grid;
+  grid-template: 'header' 80px 'code' auto 'footer' 65px / auto; }
+  #body-code #code-main-wrapper {
+    grid-area: code;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px; }
+    #body-code #code-main-wrapper #code-nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      #body-code #code-main-wrapper #code-nav ul li a span {
+        padding: 10px 20px; }
+      #body-code #code-main-wrapper #code-nav ul li a span:hover {
+        background-color: black;
+        color: white; }
+    #body-code #code-main-wrapper #code-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; }
+      #body-code #code-main-wrapper #code-wrapper .code-item {
+        overflow: hidden;
+        width: 500px;
+        height: 500px;
+        margin: 20px;
+        padding: 25px;
+        border: 2px solid black; }
+        #body-code #code-main-wrapper #code-wrapper .code-item pre {
+          height: 340px; }
+        #body-code #code-main-wrapper #code-wrapper .code-item .code-title {
+          font-family: "Roboto Slab", serif;
+          font-size: 1.85em;
+          margin-bottom: 5px; }
+        #body-code #code-main-wrapper #code-wrapper .code-item .code-description {
+          font-family: "Source Sans Pro", sans-serif;
+          margin: 0; }
+
 @media screen and (max-width: 450px) {
   header #title h1 {
     font-size: 0.8em !important; }
@@ -398,20 +443,20 @@ footer {
 
   #main-content {
     padding: 0px 15px;
-    grid-template: "contact" 90px "c1" auto "c3" auto "c4" auto "c5" auto "banner" 125px "resume" auto / 1fr !important; }
-    #main-content #c2 {
+    grid-template: "contact" 90px "contact-info" auto "about-me" auto "mercer" auto "quotes" auto "banner" 125px "resume" auto / 1fr !important; }
+    #main-content #mercer {
       display: flex !important;
       flex-direction: column;
       align-items: space-between;
       justify-content: space-between;
       padding: 20px; }
-      #main-content #c2 img {
+      #main-content #mercer img {
         margin-top: 15px; }
-    #main-content #c3 .c3-item {
+    #main-content #quote-block .quote-block-item {
       display: flex !important;
       align-items: center;
       justify-content: center; }
-      #main-content #c3 .c3-item .icon-wrapper {
+      #main-content #quote-block .quote-block-item .icon-wrapper {
         display: none; }
 
   footer div {
@@ -438,7 +483,7 @@ footer {
     header #menu-display-icon i {
       cursor: pointer; }
 
-  #main-content #c3 .c3-item .item-text-wrapper p:nth-child(3) {
+  #main-content #quote-block .quote-block-item .item-text-wrapper p:nth-child(3) {
     padding-right: 0px !important;
     align-self: center;
     text-align: center; }
@@ -451,46 +496,46 @@ footer {
     font-size: 1.25em; }
 
   #main-content {
-    grid-template: "top-l contact top-r" 90px "gutter-start c1 gutter-end" auto "gutter-start c3 gutter-end" auto "gutter-start c4 gutter-end" auto "gutter-start c5 gutter-end" auto "gutter-start banner gutter-end" 125px "gutter-start resume gutter-end" auto / 80px 1fr 80px; }
+    grid-template: "top-l contact top-r" 90px "gutter-start contact-info gutter-end" auto "gutter-start about-me gutter-end" auto "gutter-start mercer gutter-end" auto "gutter-start quotes gutter-end" auto "gutter-start banner gutter-end" 125px "gutter-start resume gutter-end" auto / 80px 1fr 80px; }
     #main-content .cta-contact {
       grid-area: contact;
       margin: 0 !important; }
     #main-content #contact-info {
       margin: 25px 0px; }
-    #main-content #c2 {
+    #main-content #mercer {
       display: grid;
       grid-template: 'text gap image' 1fr / 1fr 10px 1fr;
       justify-self: center;
       align-self: center; }
-      #main-content #c2 #c2-text-wrapper {
+      #main-content #mercer #mercer-text-wrapper {
         grid-area: text; }
-        #main-content #c2 #c2-text-wrapper p {
+        #main-content #mercer #mercer-text-wrapper p {
           padding-bottom: 0;
           padding-right: 15px; }
-      #main-content #c2 img {
+      #main-content #mercer img {
         grid-area: image;
         width: 100%;
         height: auto; }
-    #main-content #c3 {
+    #main-content #quote-block {
       flex-direction: column; }
-      #main-content #c3 .c3-item {
+      #main-content #quote-block .quote-block-item {
         width: 100%;
         display: grid;
         grid-template: 'icon text' 1fr / 3fr 7fr;
         padding: 10px;
         margin: 15px 0px; }
-        #main-content #c3 .c3-item .icon-wrapper {
+        #main-content #quote-block .quote-block-item .icon-wrapper {
           grid-area: icon;
           align-self: center;
           justify-self: center; }
-        #main-content #c3 .c3-item .item-text-wrapper {
+        #main-content #quote-block .quote-block-item .item-text-wrapper {
           grid-area: text;
           align-self: center;
           justify-self: center;
           margin: 15px; }
-          #main-content #c3 .c3-item .item-text-wrapper h2 {
+          #main-content #quote-block .quote-block-item .item-text-wrapper h2 {
             padding: 0; }
-          #main-content #c3 .c3-item .item-text-wrapper p:nth-child(3) {
+          #main-content #quote-block .quote-block-item .item-text-wrapper p:nth-child(3) {
             padding-right: 55px; } }
 
 /*# sourceMappingURL=style.css.map */
