@@ -54,3 +54,15 @@ setTimeout(function() {
 $('#hero-carousel-container').click(function() {
   advanceCarousel();
 });
+
+// Code examples links
+$(document).ready(function(){
+  $('#code-1').click(function(e) {
+    e.preventDefault();
+    window.location = 'https://github.com/afewvowels/CPP-CLASS-00-04-Pathfinder/blob/master/10-Pathfinder/src/pathfinder.cpp';
+  });
+  $('#code-2').click(function(e) {
+    e.preventDefault();
+    window.location = 'https://github.com/afewvowels/VB_CLASS_01_HW_03_Coffee_App/blob/master/HW_03_Coffee_App/CoffeeApp.vb';
+  });
+});

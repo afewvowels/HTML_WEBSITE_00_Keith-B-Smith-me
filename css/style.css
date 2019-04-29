@@ -404,7 +404,8 @@ footer {
         height: 500px;
         margin: 20px;
         padding: 25px;
-        border: 2px solid black; }
+        border: 2px solid black;
+        cursor: pointer; }
         #body-code #code-main-wrapper #code-wrapper .code-item pre {
           height: 340px; }
         #body-code #code-main-wrapper #code-wrapper .code-item .code-title {
@@ -412,6 +413,33 @@ footer {
           font-size: 1.85em;
           margin-bottom: 5px; }
         #body-code #code-main-wrapper #code-wrapper .code-item .code-description {
+          font-family: "Source Sans Pro", sans-serif;
+          margin: 0; }
+
+#body-code-example {
+  display: grid;
+  grid-template: 'header' 80px 'code' auto 'footer' 65px / auto; }
+  #body-code-example #code-pathfinder {
+    grid-area: code;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%; }
+    #body-code-example #code-pathfinder #code-pathfinder-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      #body-code-example #code-pathfinder #code-pathfinder-wrapper #code-pathfinder-content {
+        width: 80%;
+        margin-top: 15px; }
+        #body-code-example #code-pathfinder #code-pathfinder-wrapper #code-pathfinder-content .code-title {
+          font-family: "Roboto Slab", serif;
+          font-size: 1.85em;
+          margin-bottom: 0; }
+        #body-code-example #code-pathfinder #code-pathfinder-wrapper #code-pathfinder-content .code-description {
           font-family: "Source Sans Pro", sans-serif;
           margin: 0; }
 

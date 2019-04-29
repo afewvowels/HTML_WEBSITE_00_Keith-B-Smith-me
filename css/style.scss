@@ -519,6 +519,7 @@ footer {
         margin: 20px;
         padding: 25px;
         border: 2px solid black;
+        cursor: pointer;
         pre {
           height: 340px;
           .language-cpp {
@@ -528,6 +529,43 @@ footer {
           font-family: $font-display;
           font-size: 1.85em;
           margin-bottom: 5px;
+        }
+        .code-description {
+          font-family: $font-body;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+#body-code-example {
+  display: grid;
+  grid-template:
+    'header' 80px
+    'code' auto
+    'footer' 65px
+    / auto;
+  #code-pathfinder {
+    grid-area: code;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    #code-pathfinder-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      #code-pathfinder-content {
+        width: 80%;
+        margin-top: 15px;
+        .code-title {
+          font-family: $font-display;
+          font-size: 1.85em;
+          margin-bottom: 0;
         }
         .code-description {
           font-family: $font-body;
